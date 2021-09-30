@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 //Firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { DetallePeliculaComponent } from './components/detalle-pelicula/detalle-pelicula.component';
 
 //Api
