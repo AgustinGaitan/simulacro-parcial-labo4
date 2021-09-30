@@ -12,6 +12,7 @@ export class ActorAltaComponent implements OnInit {
 
   paisSeleccionado : any = '';
   controles !: FormGroup;
+  agregado : boolean = false;
   
   constructor(private fb : FormBuilder, private actorService : ActorService) { }
 
@@ -60,5 +61,13 @@ export class ActorAltaComponent implements OnInit {
       return null;
     }
 
+  }
+
+  Agregar(){
+    this.agregado = true;
+    this.controles.reset();
+    setTimeout(() => {
+      this.agregado = false;
+    }, 3000);
   }
 }

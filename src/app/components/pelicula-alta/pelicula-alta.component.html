@@ -55,7 +55,8 @@
             </div>
           </div>
           <hr class="mb-4">
-          <button class="btn btn-primary btn-lg btn-block" type="submit">Dar de alta</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="Agregar()" >Dar de alta</button>
+          <div *ngIf="agregado" style="color: rgb(17, 0, 255);">Pelicula Agregada correctamente</div>
         </form>
       </div>
     </div>
