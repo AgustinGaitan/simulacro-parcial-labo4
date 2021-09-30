@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            NOMBRE
+        </div>
+        <div class="col-sm">
+            APELLIDO
+        </div>
+        <div class="col-sm">
+           PAIS
+        </div>
+    </div>
+<div *ngFor="let actor of actores">
+    <div (click)="ObtenerActorSeleccionado(actor)" class="row">
+        <div class="col-sm">
+            {{actor.nombre}}
+        </div>
+        <div class="col-sm">
+            {{actor.apellido}}
+        </div>
+        <div class="col-sm">
+            {{actor.pais}}
+        </div>
+    </div>
+</div>
+</div>

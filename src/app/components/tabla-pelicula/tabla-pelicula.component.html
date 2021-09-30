@@ -1,0 +1,38 @@
+<div class="container">
+        <div class="row">
+            <div class="col-sm">
+                NOMBRE
+            </div>
+            <div class="col-sm">
+                TIPO
+            </div>
+            <div class="col-sm">
+                FECHA DE ESTRENO
+            </div>
+            <div class="col-sm">
+                CANTIDAD DE PUBLICO
+            </div>
+            <div class="col-sm">
+                FOTO
+            </div>
+        </div>
+    <div *ngFor="let pelicula of peliculasArray">
+        <div (click)="ObtenerDatosSeleccionado(pelicula)" class="row">
+            <div class="col-sm">
+                {{pelicula.nombre}}
+            </div>
+            <div class="col-sm">
+                {{pelicula.tipo}}
+            </div>
+            <div class="col-sm">
+                {{pelicula.fechaEstreno}}
+            </div>
+            <div class="col-sm">
+                {{pelicula.cantidadPublico}}
+            </div>
+            <div class="col-sm">
+                <img style="width: 60px; height: 60px;" [src]="pelicula.foto">
+            </div>
+        </div>
+    </div>
+</div>

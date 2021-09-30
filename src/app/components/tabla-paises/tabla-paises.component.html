@@ -1,0 +1,6 @@
+<div class="row" *ngFor="let pais of paises">
+    <div class="col-6 col-sm-3" (click)="SeleccionarPais(pais.name)">{{pais.name}} <img [src]="pais.flag" width="150px" height="100px"></div>
+   
+    <div class="w-100"></div>
+    <hr>
+  </div>

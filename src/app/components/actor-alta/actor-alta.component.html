@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="py-5 text-center">
+      <h2>Alta actor</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Paises</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <app-tabla-paises (paisSeleccionadoEmitter)="MostrarPaisSeleccionado($event)"></app-tabla-paises>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Datos del actor</h4>
+        <form [formGroup]="controles" (ngSubmit)="Enviar()" class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName" >Nombre</label>
+              <input type="text" formControlName="nombre" class="form-control" id="firstName" required>
+              <div class="invalid-feedback">
+                Se necesita un nombre valido.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName" >Apellido</label>
+              <input type="text" class="form-control" formControlName="apellido" id="lastName" value="" required>
+              <div class="invalid-feedback">
+                Se necesita un apellido valido.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Pais seleccionado</label>
+              <input type="text" class="form-control" formControlName="pais">
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Dar de alta</button>
+        </form>
+      </div>
+    </div>
+
+  </div>

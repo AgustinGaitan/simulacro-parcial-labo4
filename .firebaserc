@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "modelopaciallabolv": {
+      "hosting": {
+        "practica": [
+          "modelopaciallabolv"
+        ]
+      }
+    }
+  }
+}
