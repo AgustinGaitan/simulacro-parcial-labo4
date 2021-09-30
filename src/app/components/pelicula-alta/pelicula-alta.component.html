@@ -1,6 +1,7 @@
 <div class="container">
+  <button [routerLink]="[('/bienvenido')]">Volver a bienvenido</button>
     <div class="py-5 text-center">
-      <h2>Alta actor</h2>
+      <h2>Alta Pelicula</h2>
     </div>
 
     <div class="row">
@@ -28,8 +29,9 @@
               </div>
             </div>
             <div class="col-md-6 mb-3">
-                <select name="Tipo" formControlName="tipo">
-                    <option value="Terror" >Terror</option>
+                <select formControlName="tipo">
+                    <option selected disabled>Choose here</option>
+                    <option value="Terror">Terror</option>
                     <option value="Amor" >Amor</option>
                     <option value="Comedia" >Comedia</option>
                     <option value="Otros" >Otros</option>
