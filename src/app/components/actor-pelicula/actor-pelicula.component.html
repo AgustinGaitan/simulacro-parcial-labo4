@@ -1,0 +1,37 @@
+  
+  <main role="main">
+  
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <button [routerLink]="[('/bienvenido')]">Volver a bienvenido</button>
+        <h1 class="display-3">Listado de actores</h1>
+        <app-tabla-actor *ngIf="mostrarTabla" (actoresEmitter)="ObtenerDatos($event)"></app-tabla-actor>
+        <!-- <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p> -->
+        <p><button class="btn btn-primary btn-lg" (click)="MostrarActores()">Mostrar &raquo;</button></p>
+      </div>
+    </div>
+  
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Peliculas del actor</h2>
+            <app-tabla-peliculas-actor [actorPelicula]="actorSeleccionado"></app-tabla-peliculas-actor>
+        </div>
+        <div class="col-md-4">
+          <h2>Pais del actor</h2>
+          <app-pais-actor *ngIf="mostrarPais" [actorInput]="actorSeleccionado"></app-pais-actor>
+          <p><button class="btn btn-secondary" (click)="Limpiar()">Limpiar &raquo;</button></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Detalles del actor</h2>
+            <app-detalle-actor *ngIf="mostrarDetalles" [actorDetalles]="actorSeleccionado"></app-detalle-actor>
+            <p><button class="btn btn-secondary" (click)="LimpiarDetalle()">Limpiar &raquo;</button></p>
+        </div>
+      </div>
+  
+      <hr>
+  
+    </div> <!-- /container -->
+  </main>

@@ -23,6 +23,10 @@ import { DetallePeliculaComponent } from './components/detalle-pelicula/detalle-
 import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 import { TablaActorComponent } from './components/tabla-actor/tabla-actor.component';
+import { ActorPeliculaComponent } from './components/actor-pelicula/actor-pelicula.component';
+import { TablaPeliculasActorComponent } from './components/tabla-peliculas-actor/tabla-peliculas-actor.component';
+import { PaisActorComponent } from './components/pais-actor/pais-actor.component';
+import { DetalleActorComponent } from './components/detalle-actor/detalle-actor.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { TablaActorComponent } from './components/tabla-actor/tabla-actor.compon
     DetallePeliculaComponent,
     TablaPaisesComponent,
     TablaActorComponent,
+    ActorPeliculaComponent,
+    TablaPeliculasActorComponent,
+    PaisActorComponent,
+    DetalleActorComponent,
   ],
   imports: [
     BrowserModule,
