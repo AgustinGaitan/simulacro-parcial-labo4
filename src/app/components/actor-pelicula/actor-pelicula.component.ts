@@ -13,9 +13,11 @@ export class ActorPeliculaComponent implements OnInit {
   mostrarTabla : boolean = false;
   mostrarPais : boolean = false;
   mostrarDetalles : boolean = false;
+  mostrarPelicula : boolean = false;
 
   constructor() {
 
+    
    
   }
 
@@ -24,10 +26,13 @@ export class ActorPeliculaComponent implements OnInit {
 
 
   ObtenerDatos(e : any){
-   
+    
+    
     this.actorSeleccionado = e;
+  
     this.mostrarPais = true;
     this.mostrarDetalles = true;
+    this.mostrarPelicula = true;
   }
 
   MostrarActores(){
@@ -41,5 +46,8 @@ export class ActorPeliculaComponent implements OnInit {
 
   LimpiarDetalle(){
     this.mostrarDetalles = false;
+  }
+  LimpiarPelicula(){
+    this.mostrarPelicula = false;
   }
 }
