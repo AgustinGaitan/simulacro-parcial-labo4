@@ -9,25 +9,11 @@ import { PeliculaService } from 'src/app/services/pelicula.service';
 })
 export class TablaPeliculasActorComponent implements OnInit {
 
-  @Input() actorPelicula : any = '';
-  peliculasAMostrar : any[] = [];
+  @Input() peliculaAMostrar : any = '';
 
   constructor(private pelicula : PeliculaService) {
      
-    this.pelicula.peliculas.subscribe((data : any)=>{
-      console.log("pelicula: " + pelicula);
-      console.log("actor:" + this.actorPelicula);
-   
-      for(let pelicula of data){
-  
-        if(pelicula.actor == this.actorPelicula.nombre){
-          console.log(pelicula);
-          this.peliculasAMostrar.push(pelicula);
-          
-         }
-        
-      }
-    });
+
 
   }
 

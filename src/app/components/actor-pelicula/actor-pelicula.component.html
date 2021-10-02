@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Peliculas del actor</h2>
-            <app-tabla-peliculas-actor *ngIf="mostrarPelicula" [actorPelicula]="actorSeleccionado"></app-tabla-peliculas-actor>
+            <app-tabla-peliculas-actor *ngIf="mostrarPelicula" [peliculaAMostrar]="peliculasActor"></app-tabla-peliculas-actor>
             <p><button class="btn btn-secondary" (click)="LimpiarPelicula()">Limpiar &raquo;</button></p>
         </div>
         <div class="col-md-4">

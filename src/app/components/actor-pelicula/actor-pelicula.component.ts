@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { PeliculaService } from 'src/app/services/pelicula.service';
 import { textChangeRangeIsUnchanged } from 'typescript';
 
@@ -14,10 +14,9 @@ export class ActorPeliculaComponent implements OnInit {
   mostrarPais : boolean = false;
   mostrarDetalles : boolean = false;
   mostrarPelicula : boolean = false;
+  peliculasActor : any[] = [];
 
-  constructor() {
-
-    
+  constructor(private pelicula : PeliculaService) {
    
   }
 
@@ -27,12 +26,27 @@ export class ActorPeliculaComponent implements OnInit {
 
   ObtenerDatos(e : any){
     
-    
+
     this.actorSeleccionado = e;
   
     this.mostrarPais = true;
     this.mostrarDetalles = true;
-    this.mostrarPelicula = true;
+    this.peliculasActor = [];
+    this.mostrarPelicula = true
+
+        this.pelicula.peliculas.subscribe((data : any)=>{
+      for(let pelicula of data){
+  
+        if(pelicula.actor == this.actorSeleccionado.nombre){
+          console.log(pelicula);
+          this.peliculasActor.push(pelicula);
+          
+         }
+        
+      }
+    });
+    
+    
   }
 
   MostrarActores(){
